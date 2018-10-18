@@ -68,7 +68,18 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+ function removeDuplicates(array){
+   newArray=[];
+  for (var i=0; i<array.length; i+=1){
+    for (var j=1; j<array.length; j+=1){
+      if(array[i]===array[j]){
+        array.splice(i,1) 
+        newArray.push(i);
+      }
+    }
+  }
+  return newArray; 
+}
 
 
 
@@ -159,4 +170,15 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 
 //Code Here
 
-
+function looper () {
+  for (let i=0;i<numsArr.length;i++) {
+    for (let j=0;j<numsArr[i].length;j++) {
+      if (numsArr[i][j]%2===0) {
+        numsArr[i][j]='even'
+      } else {
+        numsArr[i][j]='odd'
+      }
+    }
+  }
+  return numsArr;
+ }

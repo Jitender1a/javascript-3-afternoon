@@ -39,11 +39,13 @@
   Inside the function showValues, write a for in loop that concatenates each of the property values and returns the concatenated string.
 */
 
-function showValues( obj ) {
-  //Code Here
+function showValues(obj){
+   let arr=[];
+   for(var i in obj){
+     arr.push(obj[i])
+   }
+   return arr.join('');
 }
-
-
 
 ////////// PROBLEM 2 //////////
 
@@ -53,7 +55,14 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function greaterThan10(obj){
+  for(var key in obj){
+    if(obj[key]>10){
+      obj[key]=0;
+    }
+  }
+  return obj; 
+}
 
 
 
@@ -65,7 +74,12 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function double(obj){
+  for(var key in obj){
+    obj[key]=obj[key]*2;
+  }
+  return obj; 
+}
 
 
 
@@ -79,7 +93,15 @@ function showValues( obj ) {
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-//Code Here
+function secrets(obj){
+  var str='';
+  for(var key in obj){
+    if(key.startsWith('sh')){
+      str+=obj[key];
+    }
+  }
+  return str; 
+}
 
 
 
